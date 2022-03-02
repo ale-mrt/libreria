@@ -125,10 +125,12 @@ td{
 
 .even:hover{
     text-decoration: underline;
+    background-color: cyan;
 }
 
 .odd:hover{
     text-decoration: underline;
+    background-color: cyan;
 }
 
 /* Chrome, Safari, Edge, Opera arrow hiding */

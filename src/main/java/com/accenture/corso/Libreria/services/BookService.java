@@ -1,5 +1,8 @@
 package com.accenture.corso.Libreria.services;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +15,9 @@ public class BookService {
 	private BookRepository br;
 	
 	public Iterable<Book> read(){
-		return br.findAll();
+		ArrayList<Book> books = (ArrayList<Book>) br.findAll();
+		Collections.sort(books);
+		return books;
 	}
 	
 	public Book create(Book b) {
