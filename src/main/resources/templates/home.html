@@ -1,27 +1,23 @@
 <!doctype html>
 <html xmlns:th="https://www.thymeleaf.org/">
-    <head>
+    <head th:replace="fragments/base.html :: headerfiles(home)">
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
-        <link rel="stylesheet" href="styles/common.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/common.js"></script>
+        <link rel="stylesheet" href="styles/common.css">
         <title>Libreria - Home</title>
     </head>
     <body>
-        <div id="header">
-            <a th:href="@{/home}">Home</a>
-            <a th:href="@{/create}">Create</a>
-            <a th:href="@{/read}">Read</a>
-            <a th:href="@{/update}">Update</a>
-            <a th:href="@{/delete}">Delete</a>
+        <div th:replace="fragments/base.html :: headerDiv">
+           
         </div>
         <div id="main">
             <h2>Home libreria</h2>
         </div>
-        <div id="footer">
+        <div th:replace="fragments/base.html :: footerDiv">
         </div>
     </body>
 </html>

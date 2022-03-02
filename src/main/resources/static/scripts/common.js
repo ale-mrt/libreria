@@ -1,4 +1,3 @@
 $(document).ready(function(){
-    //$("#header").load("pages/header.html");
-    $("#footer").load("pages/footer.html");
+    console.log("common");
 });

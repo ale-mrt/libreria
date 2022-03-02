@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="headerfiles(title)">
+        <title th:text="${title}"></title>
+        </head>
+    <body>
+        <div th:fragment="headerDiv">
+            <h1><a th:href="@{/home}">Libreria</a></h1>
+            <div>
+                <a th:href="@{/create}">Create</a>
+                <a th:href="@{/read}">Read</a>
+                <a th:href="@{/update}">Update</a>
+                <a th:href="@{/delete}">Delete</a>
+            </div>
+        </div>
+
+        <div th:fragment="footerDiv">
+            <h3>Dev team</h3>
+            <ul>
+                <li>Cervo Emanuele</li>
+                <li>Medda Alessio</li>
+                <li>Murtas Alessandro</li>
+                <li>Pusceddu Dania</li>
+            </ul>
+        </div>
+    </body>
+</html>
