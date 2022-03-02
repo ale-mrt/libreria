@@ -10,6 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    border-radius: 10px;
 }
 
 #header > h1 > a{
@@ -20,6 +21,7 @@
 #header > h1 > a:hover{
     color: darkcyan;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #header > div{
@@ -34,6 +36,7 @@
 #header > div > a:hover{
     color: white;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #main{
@@ -49,9 +52,50 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
+    border-radius: 10px;
 }
 
 .lorem{
     padding: 10px;
     text-align: justify;
+}
+
+#createForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#createForm > input{
+    font-size: 1.6em;
+    text-align: center;
+    width: 300px;
+    height: 70px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#createForm > input:hover, input:focus{
+    background-color: lightblue;
+}
+
+
+#createButton:hover{
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera arrow hiding */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox arrow hiding */
+input[type=number] {
+  -moz-appearance: textfield;
 }

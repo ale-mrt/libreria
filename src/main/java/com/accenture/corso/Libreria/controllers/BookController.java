@@ -17,8 +17,8 @@ public class BookController {
 	
 	@PostMapping("/create")
 	public String create(@ModelAttribute("newBook")Book b) {
-		System.out.println(b);
-		return "";
+		bs.create(b);
+		return b.toString();
 	}
 	  
 	@GetMapping("/read")
