@@ -2,22 +2,23 @@ package com.accenture.corso.Libreria.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.accenture.corso.Libreria.entities.Book;
 import com.accenture.corso.Libreria.services.BookService;
 
 @Controller
 public class HomeController {
-	@Autowired
-	BookService bs;
-	
 	@GetMapping({"", "/", "/home.html", "/home", "/index.html", "/index"})
 	public String home() {  
 		return "home.html";
 	}
 	
 	@GetMapping({"/createPage.html", "/createPage"})
-	public String createPage() {
+	public String createPage(Model m) {
+		Book b = new Book();
+		m.addAttribute("newBook", b);
 		return "create.html";
 	} 
 	

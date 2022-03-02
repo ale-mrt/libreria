@@ -1,13 +1,7 @@
 <!doctype html>
 <html xmlns:th="https://www.thymeleaf.org/">
     <head th:replace="fragments/base.html :: headerfiles(create)">
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/common.js"></script>
-        <link rel="stylesheet" href="styles/common.css">
+
     </head>
     <body>
         <div th:replace="fragments/base.html :: headerDiv">
@@ -15,6 +9,13 @@
         </div>
         <div id="main">
             <h2>Create libreria</h2>
+            <form id="createForm" action="#" th:action="@{/create}" th:object="${newBook}" method="post">
+                <input type="text" name="title" placeholder="Titolo del libro..." th:field="*{title}" required/>
+                <input type="text" name="author" placeholder="Autore del libro..." th:field="*{author}" required/>
+                <input type="text" name="genre" placeholder="Genere del libro..." th:field="*{genre}" required/>
+                <input type="number" name="pages" placeholder="Pagine del libro..." th:field="*{pages}" required/>
+                <input type="submit" id="createButton" value="Aggiungi libro"/>
+            </form>
         </div>
         <div th:replace="fragments/base.html :: footerDiv">
         </div>
