@@ -12,20 +12,23 @@ public class Book {
 	private String author;
 	private String genre;
 	private int pages;
+	private double price;
 	
-	public Book(Integer id, String title, String author, String genre, int pages) {
+	public Book(Integer id, String title, String author, String genre, int pages, double price) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
 		this.genre = genre;
 		this.pages = pages;
+		this.price = price;
 	}
 	
-	public Book(String title, String author, String genre, int pages) {
+	public Book(String title, String author, String genre, int pages, double price) {
 		this.title = title;
 		this.author = author;
 		this.genre = genre;
 		this.pages = pages;
+		this.price = price;
 	}
 	
 	public Book() {
@@ -70,6 +73,14 @@ public class Book {
 
 	public void setPages(int pages) {
 		this.pages = pages;
+	}
+
+	public double getPrice() {
+		return price;
+	} 
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 	@Override

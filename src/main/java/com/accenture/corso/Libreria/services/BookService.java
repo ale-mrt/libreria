@@ -38,5 +38,14 @@ public class BookService {
 			return false;
 		}
 	}
+	public boolean deleteById(Integer id) {
+		try {
+			br.deleteById(id);
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 	
 }

@@ -2,7 +2,9 @@ package com.accenture.corso.Libreria.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.accenture.corso.Libreria.entities.Book;
 import com.accenture.corso.Libreria.services.BookService;
@@ -18,21 +20,32 @@ public class BookController {
 	@PostMapping("/create")
 	public String create(@ModelAttribute("newBook")Book b) {
 		bs.create(b);
-		return b.toString();
-	}
+		System.out.println("book " + b.toString() + " added to the database");
+		
+		return "read";
+	} 
 	  
 	@GetMapping("/read")
-	public String read() {
-		return "";
+	public String read(Model m) {
+		m.addAttribute("books", bs.read());
+		
+		return "read";
 	}
 	
 	@PostMapping("/update")
-	public String update() {
-		return "";
+	@ResponseBody
+	public String update(@ModelAttribute("updatedBook")Book b) {
+		bs.deleteById(b.getId());
+		bs.create(b);
+		
+		return "read";
 	}
 	
 	@GetMapping("/delete")
-	public String delete() {
-		return "";
+	@ResponseBody
+	public String delete(@ModelAttribute("deletedBook")Book b) {
+		bs.delete(b);
+		
+		return "read";
 	}
 }
