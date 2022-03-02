@@ -1,7 +1,44 @@
-<h1><a href="@{/home}">Libreria</a></h1>
+<button><h1 id="homeLink">Libreria</h1></button>
 <div>
-    <button><a th:href="@{/create}">Create</a></button>
-    <button><a th:href="@{/update}">Update</a></button>
-    <button><a th:href="@{/read}">Read</a></button>
-    <button><a th:href="@{/delete}">Delete</a></button>
+    <input type="button" id="createLink" value="Create">
+    <input type="button" id="readLink" value="Read">
+    <input type="button" id="updateLink" value="Update">
+    <input type="button" id="deleteLink" value="Delete">
 </div>
+
+<script>
+    $("#homeLink").click(function(){
+        console.log("clicked on home");
+        $.get("http://localhost:8080/home", function(){
+            window.location.href = "http://localhost:8080/";
+        });
+    });
+
+    $("#createLink").click(function(){
+        console.log("clicked on create");
+        $.get("http://localhost:8080/create", function(page){
+            window.location.href = "http://localhost:8080/create";
+        });
+    });
+
+    $("#readLink").click(function(){
+        console.log("clicked on read");
+        $.get("http://localhost:8080/read", function(page){
+            window.location.href = "http://localhost:8080/read";
+        });
+    });
+
+    $("#updateLink").click(function(){
+        console.log("clicked on update");
+        $.get("http://localhost:8080/update", function(page){
+            window.location.href = "http://localhost:8080/update";
+        });
+    });
+
+    $("#deleteLink").click(function(){
+        console.log("clicked on delete");
+        $.get("http://localhost:8080/delete", function(page){
+            window.location.href = "http://localhost:8080/delete";
+        });
+    });
+</script>

@@ -12,8 +12,7 @@ public class HomeController {
 	BookService bs;
 	
 	@GetMapping({"", "/", "home.html", "home", "index.html", "index"})
-	public String home() {
-		
+	public String home() {  
 		return "home.html";
 	}
 	
