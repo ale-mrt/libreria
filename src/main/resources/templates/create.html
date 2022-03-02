@@ -1,22 +1,22 @@
 <!doctype html>
 <html xmlns:th="https://www.thymeleaf.org/">
-    <head>
+    <head th:replace="fragments/base.html :: headerfiles(create)">
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
-        <link rel="stylesheet" href="styles/common.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/common.js"></script>
-        <title>Libreria - Create</title>
+        <link rel="stylesheet" href="styles/common.css">
     </head>
     <body>
-        <div id="header">
+        <div th:replace="fragments/base.html :: headerDiv">
+           
         </div>
         <div id="main">
             <h2>Create libreria</h2>
         </div>
-        <div id="footer">
+        <div th:replace="fragments/base.html :: footerDiv">
         </div>
     </body>
 </html>

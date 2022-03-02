@@ -1,20 +1,23 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="headerfiles(title)">
-        <title th:text="${title}"></title>
-        </head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/common.js"></script>
+        <link rel="stylesheet" href="styles/common.css">
+        <title th:text="'Libreria - ' + ${title}"></title>
+    </head>
     <body>
-        <div th:fragment="headerDiv">
+        <div id="header" th:fragment="headerDiv">
             <h1><a th:href="@{/home}">Libreria</a></h1>
             <div>
-                <a th:href="@{/create}">Create</a>
-                <a th:href="@{/read}">Read</a>
-                <a th:href="@{/update}">Update</a>
-                <a th:href="@{/delete}">Delete</a>
+                <a th:href="@{/createPage}">Create</a>
+                <a th:href="@{/readPage}">Read</a>
+                <a th:href="@{/updatePage}">Update</a>
+                <a th:href="@{/deletePage}">Delete</a>
             </div>
         </div>
 
-        <div th:fragment="footerDiv">
+        <div id="footer" th:fragment="footerDiv">
             <h3>Dev team</h3>
             <ul>
                 <li>Cervo Emanuele</li>

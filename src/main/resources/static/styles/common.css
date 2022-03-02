@@ -12,9 +12,28 @@
     justify-content: left;
 }
 
+#header > h1 > a{
+    color: white;
+    text-decoration: none;
+}
+
+#header > h1 > a:hover{
+    color: darkcyan;
+    text-decoration: underline;
+}
 
 #header > div{
     padding-left: 30px;
+}
+
+#header > div > a{
+    color: darkcyan;
+    text-decoration: none;
+}
+
+#header > div > a:hover{
+    color: white;
+    text-decoration: underline;
 }
 
 #main{
