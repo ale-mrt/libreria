@@ -23,7 +23,7 @@ public class BookService {
 		try {
 			br.deleteById(b.getId());
 			br.save(b);
-			return true;
+			return true; 
 		}catch(Exception e) {
 			e.printStackTrace();
 			return false;

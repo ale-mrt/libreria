@@ -32,7 +32,6 @@ public class Book {
 		
 	}
 	
-	@Column(name="id")
 	public Integer getId() {
 		return id;
 	}
@@ -41,7 +40,6 @@ public class Book {
 		this.id = id;
 	}
 	
-	@Column(name="title")
 	public String getTitle() {
 		return title;
 	}
@@ -50,8 +48,7 @@ public class Book {
 		this.title = title;
 	}
 	
-	@Column(name="author")
-	public String getAuthor() {
+	public String getAuthor() { 
 		return author;
 	}
 
@@ -59,7 +56,6 @@ public class Book {
 		this.author = author;
 	}
 	
-	@Column(name="genre")
 	public String getGenre() {
 		return genre;
 	}
@@ -68,7 +64,6 @@ public class Book {
 		this.genre = genre;
 	}
 	
-	@Column(name="pages")
 	public int getPages() {
 		return pages;
 	}
