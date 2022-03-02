@@ -11,28 +11,28 @@ public class HomeController {
 	@Autowired
 	BookService bs;
 	
-	@GetMapping({"", "/", "home.html", "home", "index.html", "index"})
+	@GetMapping({"", "/", "/home.html", "/home", "/index.html", "/index"})
 	public String home() {  
 		return "home.html";
 	}
 	
-	@GetMapping({"create.html", "create"})
-	public String create() {
+	@GetMapping({"/createPage.html", "/createPage"})
+	public String createPage() {
 		return "create.html";
-	}
+	} 
 	
-	@GetMapping({"read.html", "read"})
-	public String read() {
-		return "read.html";
-	}
+	@GetMapping({"/readPage.html", "/readPage"}) 
+	public String readPage() {
+		return "read.html";    
+	} 
 	
-	@GetMapping({"update.html", "update"})
-	public String update() {
+	@GetMapping({"/updatePage.html", "/updatePage"})
+	public String updatePage() {
 		return "update.html";
 	}
 	
-	@GetMapping({"delete.html", "delete"})
-	public String delete() {
-		return "home.html";
+	@GetMapping({"/deletePage.html", "/deletePage"})
+	public String deletePage() {
+		return "delete.html";
 	}
 }

@@ -11,19 +11,7 @@
     align-items: center;
     justify-content: left;
 }
-#header > h1 > a{
-    color: white;
-    text-decoration: none;
-}
 
-#header > h1 > a:hover{
-    color: darkcyan;
-    text-decoration: underline;
-}
-
-#header > button:hover{
-    background-color: lightblue;
-}
 
 #header > div{
     padding-left: 30px;
