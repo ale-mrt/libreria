@@ -47,5 +47,11 @@
     font-style: italic;
     padding: 50px;
     display: flex;
-    justify-content: right;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.lorem{
+    padding: 10px;
+    text-align: justify;
 }
