@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.accenture.corso.Libreria.entities.Book;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 @Controller
+@RequestMapping("/book")
 public class BookController {
 	@Autowired
 	BookService bs;
@@ -20,16 +22,16 @@ public class BookController {
 	@PostMapping("/create")
 	public String create(@ModelAttribute("newBook")Book b) {
 		bs.create(b);
-		System.out.println("book " + b.toString() + " added to the database");
 		
-		return "read";
+		
+		return "redirect:/readPage";
 	} 
 	  
 	@GetMapping("/read")
 	public String read(Model m) {
 		m.addAttribute("books", bs.read());
 		
-		return "read";
+		return "read.html";
 	}
 	
 	@PostMapping("/update")

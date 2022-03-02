@@ -27,7 +27,7 @@ public class HomeController {
 	
 	@GetMapping({"/updatePage.html", "/updatePage"})
 	public String updatePage() {
-		return "update.html";
+		return "update.html"; 
 	}
 	
 	@GetMapping({"/deletePage.html", "/deletePage"})

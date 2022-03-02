@@ -9,7 +9,7 @@
         </div>
         <div id="main">
             <h2>Create libreria</h2>
-            <form id="createForm" action="#" th:action="@{/create}" th:object="${newBook}" method="post">
+            <form id="createForm" action="#" th:action="@{/book/create}" th:object="${newBook}" method="post">
                 <input type="text" name="title" placeholder="Titolo del libro..." th:field="*{title}" required/>
                 <input type="text" name="author" placeholder="Autore del libro..." th:field="*{author}" required/>
                 <input type="text" name="genre" placeholder="Genere del libro..." th:field="*{genre}" required/>

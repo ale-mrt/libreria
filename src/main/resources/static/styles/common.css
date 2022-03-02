@@ -88,6 +88,33 @@
     cursor: pointer;
 }
 
+table{
+    border-radius: 10px;
+    margin:auto;
+    margin-bottom: 40px;
+    border-collapse: separate;
+    font-size: 1.2em;
+}
+
+td{
+    width: 150px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.tableHeader{
+    background-color: cornflowerblue;
+    height: 40px;
+}
+
+.even{
+    background-color: lightskyblue;
+}
+
+.odd{
+    background-color: aqua;
+}
+
 /* Chrome, Safari, Edge, Opera arrow hiding */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

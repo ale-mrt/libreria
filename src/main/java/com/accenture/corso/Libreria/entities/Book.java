@@ -88,4 +88,8 @@ public class Book {
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", genre=" + genre + ", pages=" + pages
 				+ "]";
 	}
+	
+	public String getStringBook() {
+		return this.id+","+this.title+","+this.author+","+this.genre+","+this.pages+","+this.price;
+	}
 }

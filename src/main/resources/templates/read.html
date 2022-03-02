@@ -9,9 +9,25 @@
         </div>
         <div id="main">
             <h2>Read libreria</h2>
-            <table th:replace="fragments/base.html :: readTable">
-                
+            <table id="readTable">
+                <tr class="tableHeader">
+                    <th>Id</th>
+                    <th>Titolo</th>
+                    <th>Autore</th>
+                    <th>Genere</th>
+                    <th>Pagine</th>
+                    <th>Prezzo</th>
+                </tr>
+                <tr th:each="book: ${books}"> 
+                    <td th:text="${book.id}">id</td>
+                    <td th:text="${book.title}">title</td>
+                    <td th:text="${book.author}">author</td>
+                    <td th:text="${book.genre}">genere</td>
+                    <td th:text="${book.pages}">pagesd</td>
+                    <td th:text="${book.price}">price</td>
+                </tr>
             </table>
+            <button id="readButton" th:onclick="|window.location.href='/book/read'|">Leggi libri da database</button>
         </div>
         <div th:replace="fragments/base.html :: footerDiv">
         </div>
